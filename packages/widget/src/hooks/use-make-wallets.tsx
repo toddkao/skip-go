@@ -6,6 +6,13 @@ import { trackWallet } from '../store/track-wallet';
 import { chainIdToName } from '../chains';
 import { useChains } from './use-chains';
 import { gracefullyConnect } from '../utils/wallet';
+import { bech32mAddress } from '@penumbra-zone/bech32m';
+import {
+  createPraxClient,
+  isPraxConnected,
+  isPraxInstalled,
+  requestPraxConnection,
+} from '@penumbra-zone/client';
 
 export interface MinimalWallet {
   walletName: string;
@@ -59,6 +66,21 @@ export const useMakeWallets = () => {
     let wallets: MinimalWallet[] = [];
 
     if (chainType === 'cosmos') {
+      if (chainID.includes('penumbra')) {
+        const wallet: MinimalWallet = {
+          walletName: 'prax',
+          walletPrettyName: 'Prax Wallet',
+          walletInfo: {
+            logo: 'https://raw.githubusercontent.com/penumbra-zone/web/main/apps/extension/public/favicon/icon128.png',
+          },
+          connect: async () => {
+            console.error('Prax wallet is not supported');
+          },
+          getAddress: async () => {
+            const isInstalled = await isPraxInstalled();
+          },
+        };
+      }
       const chainName = chainIdToName[chainID];
       const walletRepo = getWalletRepo(chainName);
       wallets = walletRepo.wallets.map((wallet) => ({

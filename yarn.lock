@@ -3677,6 +3677,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@penumbra-zone/bech32m@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@penumbra-zone/bech32m@npm:6.1.0"
+  dependencies:
+    bech32: ^2.0.0
+  checksum: 90575331e12a5128d27cbbd864da8637c52cff3ab6da7458cda929f19858bb025ed6b78bd3287159e326c27cfb07997192de9a9261c820ea3373bd99003b6ada
+  languageName: node
+  linkType: hard
+
+"@penumbra-zone/client@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@penumbra-zone/client@npm:8.0.0"
+  peerDependencies:
+    "@penumbra-zone/protobuf": 5.1.0
+    "@penumbra-zone/transport-dom": 7.1.0
+  checksum: 89f939e88a72ee01941d12d2fedbb77f7beb957d330663d3a61a7deda445e8e6b3d448f868f76e9dc266c69bbbab7e13d9b0c1281c5634deba0679f804d3b538
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -5893,6 +5912,8 @@ __metadata:
     "@graz-sh/types": 0.0.14
     "@heroicons/react": ^2.1.3
     "@interchain-ui/react": ^1.23.13
+    "@penumbra-zone/bech32m": 6.1.0
+    "@penumbra-zone/client": 8.0.0
     "@radix-ui/colors": ^3.0.0
     "@radix-ui/react-accordion": ^1.1.2
     "@radix-ui/react-collapsible": ^1.0.3
