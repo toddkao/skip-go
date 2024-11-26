@@ -1,5 +1,12 @@
 ## 0.0.15
 
+## 3.0.16
+
+### Patch Changes
+
+- cae55fe: fix recovery wallet override destination address
+- 59b165a: improve and simplify button text
+
 ## 3.0.15
 
 ### Patch Changes
